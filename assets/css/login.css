@@ -26,7 +26,7 @@ main {
     position: relative;
 }
 
-.about-box {
+#about-box {
     width: 65%;
     height: 100vh;
     background: url('/assets/img/login_img.jpg') center / cover no-repeat;
@@ -35,17 +35,17 @@ main {
     justify-content: center;
 }
 
-.about-box .heading {
+#about-box .heading {
     font-size: 48px;
     bottom: 16%;
 }
 
-.about-box .subheading{
+#about-box .subheading{
     font-size: 24px;
     bottom: 12%;
 }
 
-.change-language {
+#change-language {
     width: 152px;
     height: 40px;
     position: absolute;
@@ -55,7 +55,7 @@ main {
     display: flex;
 }
 
-.change-language .lang-logo {
+#change-language .lang-logo {
     width: 16px;
     height: 16px;
     margin: 0 4px;
@@ -67,7 +67,7 @@ main {
     color: #8D99BB;
 }
 
-.login-form {
+#login-form {
     background-color: #fff;
     width: 30%;
     height: 621px;
@@ -81,13 +81,13 @@ main {
     align-items: center;
 }
 
-.login-form .main-logo {
+#login-form .main-logo {
     width: 282px;
     height: 96px;
     margin-top: 48px;
 }
 
-.login-form h3 {
+#login-form h3 {
     color: #EE0033;
     font-size: 24px;
     font-weight: 700;
@@ -95,7 +95,7 @@ main {
     margin-bottom: 40px;
 }
 
-.login-form .input {
+#login-form .input {
     width: 464px;
     height: 58px;
     border: 1px solid #8D99BB;
@@ -104,7 +104,7 @@ main {
     margin-bottom: 24px;
 }
 
-.login-form .password {
+#login-form .password {
     width: 464px;
     display: flex;
     justify-content: space-between;

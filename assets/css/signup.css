@@ -26,7 +26,7 @@ main {
     position: relative;
 }
 
-.about-box {
+#about-box {
     width: 65%;
     height: 100vh;
     background: url('/assets/img/login_img.jpg') center / cover no-repeat;
@@ -35,17 +35,17 @@ main {
     justify-content: center;
 }
 
-.about-box .heading {
+#about-box .heading {
     font-size: 48px;
     bottom: 16%;
 }
 
-.about-box .subheading{
+#about-box .subheading{
     font-size: 24px;
     bottom: 12%;
 }
 
-.change-language {
+#change-language {
     width: 152px;
     height: 40px;
     position: absolute;
@@ -55,7 +55,7 @@ main {
     display: flex;
 }
 
-.change-language .lang-logo {
+#change-language .lang-logo {
     width: 16px;
     height: 16px;
     margin: 0 4px;
@@ -67,7 +67,7 @@ main {
     color: #8D99BB;
 }
 
-.signup-form {
+#signup-form {
     background-color: #fff;
     width: 30%;
     height: 88%;
@@ -81,13 +81,13 @@ main {
     align-items: center;
 }
 
-.signup-form .main-logo {
+#signup-form .main-logo {
     width: 282px;
     height: 96px;
     margin-top: 32px;
 }
 
-.signup-form h3 {
+#signup-form h3 {
     color: #EE0033;
     font-size: 24px;
     font-weight: 700;
@@ -95,7 +95,7 @@ main {
     margin-bottom: 40px;
 }
 
-.signup-form .input {
+#signup-form .input {
     width: 464px;
     height: 58px;
     border: 1px solid #8D99BB;
@@ -104,13 +104,13 @@ main {
     margin-bottom: 16px;
 }
 
-.signup-form .fullname, .signup-form .company {
+#signup-form .fullname, #signup-form .company {
     width: 464px;
     display: flex;
     justify-content: space-between;
 }
 
-.signup-form .name, .signup-form .info-co {
+#signup-form .name, #signup-form .info-co {
     width: 226px;
     height: 58px;
     border: 1px solid #8D99BB;
