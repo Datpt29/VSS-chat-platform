@@ -48,8 +48,9 @@ main {
 .change-language {
     width: 152px;
     height: 40px;
-    position: relative;
-    left: 27%;
+    position: absolute;
+    right: 1%;
+    top: 2%;
     align-items: center;
     display: flex;
 }
