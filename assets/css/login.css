@@ -106,15 +106,29 @@ main {
 
 #login-form .password {
     width: 464px;
+    height: 24px;
     display: flex;
     justify-content: space-between;
 }
 
-.password .check-box {
+.password .save-pass {
+    height: 24px;
     font-family: quicksand;
     font-weight: 500;
     color: #353B44;
-    display: inline-block;
+    display: flex;
+}
+
+.password .check-box {
+    background-color: #E0E0E0;
+    margin-right: 8px;
+    width: 24px;
+    height: 24px;
+    accent-color: #EE0033;
+}
+
+.password p {
+    margin-top: 4px;
 }
 
 .password .forgot-pass {
@@ -123,6 +137,7 @@ main {
     font-weight: 500;
     color: #5680F9;
     text-decoration: none;
+    margin-top: 4px;
 }
 
 .login-btn {
