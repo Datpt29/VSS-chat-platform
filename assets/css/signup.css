@@ -1,0 +1,161 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #FEFEFF;
+}
+
+main {
+    width: 100%;
+    height: 100%;
+}
+
+.text-box {
+    position: absolute;
+    color: #5680F9;
+    font-weight: 400;
+}
+
+
+main {
+    display: flex;
+    position: relative;
+}
+
+.about-box {
+    width: 65%;
+    height: 100vh;
+    background: url('/assets/img/login_img.jpg') center / cover no-repeat;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.about-box .heading {
+    font-size: 48px;
+    bottom: 16%;
+}
+
+.about-box .subheading{
+    font-size: 24px;
+    bottom: 12%;
+}
+
+.change-language {
+    width: 152px;
+    height: 40px;
+    position: relative;
+    left: 27%;
+    align-items: center;
+    display: flex;
+}
+
+.change-language .lang-logo {
+    width: 16px;
+    height: 16px;
+    margin: 0 4px;
+    opacity: 0.5;
+}
+
+#language {
+    border: none;
+    color: #8D99BB;
+}
+
+.signup-form {
+    background-color: #fff;
+    width: 30%;
+    height: 88%;
+    border-radius: 16px;
+    box-shadow: 0 4px 24px 0 #5655D23D;
+    position: absolute;
+    right: 5%;
+    top: 6%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.signup-form .main-logo {
+    width: 282px;
+    height: 96px;
+    margin-top: 32px;
+}
+
+.signup-form h3 {
+    color: #EE0033;
+    font-size: 24px;
+    font-weight: 700;
+    margin-top: 48px;
+    margin-bottom: 40px;
+}
+
+.signup-form .input {
+    width: 464px;
+    height: 58px;
+    border: 1px solid #8D99BB;
+    padding-left: 16px;
+    border-radius: 8px;
+    margin-bottom: 16px;
+}
+
+.signup-form .fullname, .signup-form .company {
+    width: 464px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.signup-form .name, .signup-form .info-co {
+    width: 226px;
+    height: 58px;
+    border: 1px solid #8D99BB;
+    padding-left: 16px;
+    border-radius: 8px;
+    margin-bottom: 16px;
+}
+
+.signup-btn {
+    width: 464px;
+    height: 48px;
+    color: #FCFCFC;
+    font-size: 18px;
+    font-family: quicksand;
+    font-weight: 500;
+    background-color: #EE0033;
+    border: none;
+    border-radius: 8px;
+    margin-top: 8px;
+    margin-bottom: 16px;
+}
+
+.signup-btn:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.login-link-text {
+    text-align: center;
+    font-family: quicksand;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.login-link {
+    color: #5680F9;
+    font-family: quicksand;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+
+
+
+
+
+
+
+
