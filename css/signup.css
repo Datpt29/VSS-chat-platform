@@ -29,7 +29,7 @@ main {
 #about-box {
     width: 65%;
     height: 100vh;
-    background: url('/assets/img/login_img.jpg') center / cover no-repeat;
+    background: url('../assets/img/login_img.jpg') center / cover no-repeat;
     position: relative;
     display: flex;
     justify-content: center;
@@ -67,27 +67,29 @@ main {
     color: #8D99BB;
 }
 
-#login-form {
+#signup-form {
     background-color: #fff;
     width: 30%;
-    height: 621px;
+    height: 88%;
     border-radius: 16px;
     box-shadow: 0 4px 24px 0 #5655D23D;
     position: absolute;
     right: 5%;
-    top: 20%;
+    top: 6%;
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-left: 16px;
+    padding-right: 16px;
 }
 
-#login-form .main-logo {
+#signup-form .main-logo {
     width: 282px;
     height: 96px;
-    margin-top: 48px;
+    margin-top: 32px;
 }
 
-#login-form h3 {
+#signup-form h3 {
     color: #EE0033;
     font-size: 24px;
     font-weight: 700;
@@ -95,53 +97,32 @@ main {
     margin-bottom: 40px;
 }
 
-#login-form .input {
-    width: 464px;
+#signup-form .input {
+    width: 100%;
     height: 58px;
     border: 1px solid #8D99BB;
-    padding: 0 16px;
+    padding-left: 16px;
     border-radius: 8px;
-    margin-bottom: 24px;
+    margin-bottom: 16px;
 }
 
-#login-form .password {
-    width: 464px;
-    height: 24px;
+#signup-form .fullname, #signup-form .company {
+    width: 100%;
     display: flex;
     justify-content: space-between;
 }
 
-.password .save-pass {
-    height: 24px;
-    font-family: quicksand;
-    font-weight: 500;
-    color: #353B44;
-    display: flex;
+#signup-form .name, #signup-form .info-co {
+    width: 48%;
+    height: 58px;
+    border: 1px solid #8D99BB;  
+    padding-left: 16px;
+    border-radius: 8px;
+    margin-bottom: 16px;
 }
 
-.password .check-box {
-    background-color: #E0E0E0;
-    margin-right: 8px;
-    width: 24px;
-    height: 24px;
-    accent-color: #EE0033;
-}
-
-.password p {
-    margin-top: 4px;
-}
-
-.password .forgot-pass {
-    font-family: quicksand;
-    font-size: 16px;
-    font-weight: 500;
-    color: #5680F9;
-    text-decoration: none;
-    margin-top: 4px;
-}
-
-.login-btn {
-    width: 464px;
+.signup-btn {
+    width: 100%;
     height: 48px;
     color: #FCFCFC;
     font-size: 18px;
@@ -150,30 +131,74 @@ main {
     background-color: #EE0033;
     border: none;
     border-radius: 8px;
-    margin-top: 32px;
+    margin-top: 8px;
     margin-bottom: 16px;
 }
 
-.login-btn:hover {
+.signup-btn:hover {
     opacity: 0.8;
     cursor: pointer;
 }
 
-.signup-link-text {
+.login-link-text {
     text-align: center;
     font-family: quicksand;
     font-size: 14px;
     font-weight: 500;
 }
 
-.signup-link {
+.login-link {
     color: #5680F9;
     font-family: quicksand;
     font-size: 14px;
     font-weight: 700;
 }
 
+@media screen and (max-width: 63.9375em) {
+    main {
+        height: 100vh;
+    }
 
+    #about-box {
+        display: none;
+    }
+
+    #signup-form {
+        width: 80%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+/* Mobile */
+@media only screen and (max-width: 46.1875em) {
+    #change-language {
+        width: 30%;
+        height: 24px;
+        top: 0;
+        right: 0;
+    }
+
+    #signup-form {
+        height: 92%;
+    }
+
+    #signup-form .main-logo {
+        margin-top: 16px;
+    }
+
+    #signup-form h3 {
+        margin: 24px 0 24px 0;
+    }
+
+    .signup-btn,
+    #signup-form .input,
+    #signup-form .name, 
+    #signup-form .info-co {
+        height: 40px;
+    }
+}
 
 
 

@@ -12,6 +12,8 @@ html {
 main {
     width: 100%;
     height: 100%;
+    display: flex;
+    position: relative;
 }
 
 .text-box {
@@ -20,16 +22,10 @@ main {
     font-weight: 400;
 }
 
-
-main {
-    display: flex;
-    position: relative;
-}
-
 #about-box {
     width: 65%;
     height: 100vh;
-    background: url('/assets/img/login_img.jpg') center / cover no-repeat;
+    background: url('../assets/img/login_img.jpg') center / cover no-repeat;
     position: relative;
     display: flex;
     justify-content: center;
@@ -67,60 +63,87 @@ main {
     color: #8D99BB;
 }
 
-#signup-form {
+#login-form {
     background-color: #fff;
     width: 30%;
-    height: 88%;
+    height: 621px;
     border-radius: 16px;
     box-shadow: 0 4px 24px 0 #5655D23D;
     position: absolute;
     right: 5%;
-    top: 6%;
+    top: 20%;
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 0 16px 0 16px;
 }
 
-#signup-form .main-logo {
+#login-form .main-logo {
     width: 282px;
     height: 96px;
-    margin-top: 32px;
+    margin-top: 48px;
 }
 
-#signup-form h3 {
+#login-form h3 {
     color: #EE0033;
     font-size: 24px;
     font-weight: 700;
     margin-top: 48px;
     margin-bottom: 40px;
+    text-align: center;
 }
 
-#signup-form .input {
-    width: 464px;
+#login-form .input {
+    width: 100%;
     height: 58px;
     border: 1px solid #8D99BB;
-    padding-left: 16px;
+    padding: 0 16px;
     border-radius: 8px;
-    margin-bottom: 16px;
+    margin-bottom: 24px;
 }
 
-#signup-form .fullname, #signup-form .company {
-    width: 464px;
+#login-form .helper-text {
+    display: none;
+}
+
+#login-form .password {
+    width: 100%;
+    height: 24px;
     display: flex;
     justify-content: space-between;
 }
 
-#signup-form .name, #signup-form .info-co {
-    width: 226px;
-    height: 58px;
-    border: 1px solid #8D99BB;
-    padding-left: 16px;
-    border-radius: 8px;
-    margin-bottom: 16px;
+.password .save-pass {
+    height: 24px;
+    font-family: quicksand;
+    font-weight: 500;
+    color: #353B44;
+    display: flex;
 }
 
-.signup-btn {
-    width: 464px;
+.password .check-box {
+    background-color: #E0E0E0;
+    margin-right: 8px;
+    width: 24px;
+    height: 24px;
+    accent-color: #EE0033;
+}
+
+.password p {
+    margin-top: 4px;
+}
+
+.password .forgot-pass {
+    font-family: quicksand;
+    font-size: 16px;
+    font-weight: 500;
+    color: #5680F9;
+    text-decoration: none;
+    margin-top: 4px;
+}
+
+.login-btn {
+    width: 100%;
     height: 48px;
     color: #FCFCFC;
     font-size: 18px;
@@ -129,28 +152,67 @@ main {
     background-color: #EE0033;
     border: none;
     border-radius: 8px;
-    margin-top: 8px;
+    margin-top: 32px;
     margin-bottom: 16px;
 }
 
-.signup-btn:hover {
+.login-btn:hover {
     opacity: 0.8;
     cursor: pointer;
 }
 
-.login-link-text {
+.signup-link-text {
     text-align: center;
     font-family: quicksand;
     font-size: 14px;
     font-weight: 500;
 }
 
-.login-link {
+.signup-link {
     color: #5680F9;
     font-family: quicksand;
     font-size: 14px;
     font-weight: 700;
 }
+
+@media only screen and (max-width: 63.9375em) {
+    main {
+        height: 100vh;
+    }
+
+    #about-box {
+        display: none;
+    }
+
+    #login-form {
+        width: 80%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+/* Mobile */
+@media only screen and (max-width: 46.1875em) {
+    #change-language {
+        width: 30%;
+        height: 24px;
+        top: 0;
+        right: 0;
+    }
+
+    #login-form .password,
+    #login-form .login-btn,
+    #login-form .input,
+    #login-form h3 {
+        width: 100%;
+    }
+
+    #login-form h3 {
+        font-size: 16px;
+    }
+}
+
 
 
 
