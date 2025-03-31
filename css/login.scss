@@ -1,0 +1,316 @@
+@import "shared";
+
+
+#about-box {
+    width: 65%;
+    height: 100vh;
+    background: url('../assets/img/login_img.jpg') center / cover no-repeat;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    animation: fadeIn 1s ease-in-out;
+
+    .text-box {
+        position: absolute;
+        color: $main-text-color;
+        font-weight: 400;
+    }
+
+    .heading {
+        font-size: 48px;
+        bottom: 16%;
+    }
+
+    .subheading {
+        font-size: 24px;
+        bottom: 12%;
+    }
+}
+
+#change-language {
+    width: 120px;
+    height: 30px;
+    position: absolute;
+    right: 1%;
+    top: 2%;
+    align-items: center;
+    display: flex;
+
+    &:hover {
+        border: 1px solid #353B44;
+        border-radius: 8px;
+        cursor: pointer;
+
+        .lang-logo {
+            svg {
+                path {
+                    fill:#353B44;
+                }
+            }
+        }
+
+        #language {
+            color: #353B44;
+            cursor: pointer;
+        }
+    }
+
+    .lang-logo {
+        width: 16px;
+        height: 16px;
+        margin: 0 4px;
+    }
+
+    #language {
+        font-family: $sub-fontf;
+        font-size: 16px;
+        border: none;
+        color: #8D99BB;
+        transition: all 0.3s ease;
+    }
+}
+
+#login-form {
+    background-color: #fff;
+    width: 30%;
+    height: 621px;
+    border-radius: 16px;
+    box-shadow: 0 4px 24px 0 #5655D23D;
+    position: absolute;
+    right: 5%;
+    top: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 4% 0 4%;
+    animation: fadeIn 1s ease-in-out;
+
+    .main-logo {
+        width: 270px;
+        height: 96px;
+        margin-top: 32px;
+    }
+
+    h3 {
+        color: $main-color;
+        font-size: 24px;
+        font-weight: 700;
+        margin-top: 48px;
+        margin-bottom: 24px;
+        text-align: center;
+    }
+
+    .input {
+        width: 100%;
+        height: 58px;
+        border: 1px solid #8D99BB;
+        padding: 0 16px;
+        border-radius: 8px;
+        margin-top: 16px;
+
+        &:focus {
+            outline: none;
+            border: 2px solid $main-text-color;
+        }
+    }
+
+    .error {
+        width: 100%;
+        color: $main-color;
+        font-family: $sub-fontf;
+        font-size: 12px;
+        font-weight: 500;
+        line-height: 2;
+        display: none;
+    }
+    
+    .subtext-usn {
+        position: absolute;
+        top: 40%;
+        left: 5%;
+        font-size: 12px;
+        font-family: $sub-fontf;
+        font-weight: 500;
+        color: $main-text-color;
+        transition: 0.3s;
+        display: none;
+    }
+
+    .subtext-psw {
+        position: absolute;
+        top: 52%;
+        left: 6%;
+        font-size: 12px;
+        font-family: $sub-fontf;
+        font-weight: 500;
+        color: $main-text-color;
+        transition: 0.3s;
+        display: none;
+
+    }
+
+    // .input:focus + .subtext-usn,
+    // .input:not(:placeholder-shown) + .subtext-usn {
+    //     top: 40%;
+    //     left: 5%;
+    //     font-size: 12px;
+    //     padding-left: 8px;
+    //     color: $main-text-color;
+    //     display: block;
+    // }
+
+    // .input:focus + .subtext-psw,
+    // .input:not(:placeholder-shown) + .subtext-psw {
+    //     top: 52%;
+    //     left: 7%;
+    //     font-size: 12px;
+    //     padding-left: 8px;
+    //     color: $main-text-color;
+    //     display: block;
+    // }
+
+    .password {
+        width: 100%;
+        height: 16px;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 16px;
+
+        .save-pass {
+            height: 16px;
+            font-family: $sub-fontf;
+            font-weight: 500;
+            color: #353B44;
+            display: flex;
+        }
+
+        .check-box {
+            margin-right: 8px;
+            width: 16px;
+            height: 16px;
+            appearance: none;
+            background-color: #E0E0E0;
+            border: 1px solid #8D99BB;
+            border-radius: 4px;
+            opacity: 0.4;
+
+            &:hover {
+                cursor: pointer;
+                background-color: #AEB7D1;
+                border-color: #AEB7D1;
+
+            }
+
+            &:checked {
+                background-color: $main-color;
+                opacity: 1;
+                border: none;
+                position: relative;
+
+                &::after {
+                    content: url(../assets/icon/tick-icon.svg);
+                    color: #FFFFFF;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    font-size: 12px;
+                }
+
+                &:hover {
+                    background-color: #B50020;
+                }
+            }
+        }
+
+        .forgot-pass {
+            font-family: $sub-fontf;
+            font-size: 16px;
+            font-weight: 500;
+            color: $main-text-color;
+            text-decoration: none;
+        }
+    }
+
+    .login-btn {
+        width: 100%;
+        height: 48px;
+        color: #FCFCFC;
+        font-size: 18px;
+        font-family: $sub-fontf;
+        font-weight: 500;
+        background-color: $main-color;
+        border: none;
+        border-radius: 8px;
+        margin-top: 32px;
+        margin-bottom: 16px;   
+        
+        &:hover {
+            background-color: #B50020;
+            cursor: pointer;
+        }
+
+        &:disabled {
+            opacity: 0.4;
+        }
+    }
+
+    .signup-link-text {
+        text-align: center;
+        font-family: $sub-fontf;
+        font-size: 14px;
+        font-weight: 500;
+
+        .signup-link {
+            color: $main-text-color;
+            font-family: $sub-fontf;
+            font-size: 14px;
+            font-weight: 700;
+        }
+    }
+
+}
+
+@media only screen and (max-width: 63.9375em) {
+    main {
+        height: 100vh;
+    }
+
+    #about-box {
+        display: none;
+    }
+
+    #login-form {
+        @include center;
+        animation: none;
+    }
+}
+
+/* Mobile */
+@media only screen and (max-width: 46.1875em) {
+    #change-language {
+        width: 30%;
+        height: 24px;
+        top: 0;
+        right: 0;
+    }
+
+
+    #login-form {
+        h3 {
+            font-size: 16px;
+        }
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}

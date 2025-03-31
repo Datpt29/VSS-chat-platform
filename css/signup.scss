@@ -1,0 +1,214 @@
+@import "shared";
+
+
+#about-box {
+    width: 65%;
+    height: 100vh;
+    background: url('../assets/img/login_img.jpg') center / cover no-repeat;
+    position: relative;
+    display: flex;
+    justify-content: center;
+
+    .text-box {
+        position: absolute;
+        color: $main-text-color;
+        font-weight: 400;
+    }
+
+    .heading {
+        font-size: 48px;
+        bottom: 16%;
+    }
+
+    .subheading {
+        font-size: 24px;
+        bottom: 12%;
+    }
+}
+
+#change-language {
+    width: 120px;
+    height: 30px;
+    position: absolute;
+    right: 1%;
+    top: 2%;
+    align-items: center;
+    display: flex;
+
+    &:hover {
+        border: 1px solid #353B44;
+        border-radius: 8px;
+        cursor: pointer;
+
+        .lang-logo {
+            svg {
+                path {
+                    fill:#353B44;
+                }
+            }
+        }
+
+        #language {
+            color: #353B44;
+            cursor: pointer;
+        }
+    }
+
+    .lang-logo {
+        width: 16px;
+        height: 16px;
+        margin: 0 4px;
+    }
+
+    #language {
+        font-family: $sub-fontf;
+        font-size: 16px;
+        border: none;
+        color: #8D99BB;
+        transition: all 0.3s ease;
+    }
+}
+
+#signup-form {
+    background-color: #fff;
+    width: 30%;
+    height: 88%;
+    border-radius: 16px;
+    box-shadow: 0 4px 24px 0 #5655D23D;
+    position: absolute;
+    right: 5%;
+    top: 6%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 2%;
+    padding-right: 2%;
+
+    .main-logo {
+        width: 270px;
+        height: 96px;
+        margin-top: 32px;
+    }
+
+    h3 {
+        color: $main-color;
+        font-size: 24px;
+        font-weight: 700;
+        margin-top: 48px;
+        margin-bottom: 24px;
+        text-align: center;
+    }
+
+    .input {
+        width: 100%;
+        height: 58px;
+        border: 1px solid #8D99BB;
+        padding-left: 16px;
+        border-radius: 8px;
+        margin-bottom: 16px;
+
+        &:focus {
+            outline: none;
+            border: 2px solid $main-text-color;
+        }
+    }
+
+    .fullname, .company {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .name, .info-co {
+        width: 48%;
+        height: 58px;
+        border: 1px solid #8D99BB;  
+        padding-left: 16px;
+        border-radius: 8px;
+        margin-bottom: 16px;
+
+        &:focus {
+            outline: none;
+            border: 2px solid $main-text-color;
+        }
+    }
+
+    .signup-btn {
+        width: 100%;
+        height: 48px;
+        color: #FCFCFC;
+        font-size: 18px;
+        font-family: $sub-fontf;
+        font-weight: 500;
+        background-color: $main-color;
+        border: none;
+        border-radius: 8px;
+        margin-top: 16px;
+        margin-bottom: 16px;
+
+        &:hover {
+            background-color: #B50020;
+            cursor: pointer;
+        }
+    }
+
+    .login-link-text {
+        text-align: center;
+        font-family: $sub-fontf;
+        font-size: 14px;
+        font-weight: 500;
+    }
+
+    .login-link {
+        color: $main-text-color;
+        font-family: $sub-fontf;
+        font-size: 14px;
+        font-weight: 700;
+    }
+}
+
+@media screen and (max-width: 63.9375em) {
+    main {
+        height: 100vh;
+    }
+
+    #about-box {
+        display: none;
+    }
+
+    #signup-form {
+        width: 80%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+/* Mobile */
+@media only screen and (max-width: 46.1875em) {
+    #change-language {
+        width: 30%;
+        height: 24px;
+        top: 0;
+        right: 0;
+    }
+
+    #signup-form {
+        height: 92%;
+    }
+
+    #signup-form .main-logo {
+        margin-top: 16px;
+    }
+
+    #signup-form h3 {
+        margin: 24px 0 24px 0;
+    }
+
+    .signup-btn,
+    #signup-form .input,
+    #signup-form .name, 
+    #signup-form .info-co {
+        height: 40px;
+    }
+}
