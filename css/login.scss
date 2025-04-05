@@ -1,5 +1,16 @@
 @import "shared";
 
+.hidden {
+    display: none;
+}
+
+.error {
+    color: $main-color;
+}
+
+.normal {
+    color: $main-text-color;
+}
 
 #about-box {
     width: 65%;
@@ -100,81 +111,68 @@
         text-align: center;
     }
 
-    .input {
+    .form-group {
         width: 100%;
-        height: 58px;
-        border: 1px solid #8D99BB;
-        padding: 0 16px;
-        border-radius: 8px;
-        margin-top: 16px;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        .input {
+            width: 100%;
+            height: 58px;
+            border: 1px solid #8D99BB;
+            padding: 0 16px;
+            border-radius: 8px;
+            margin-top: 16px;
+    
+            &:focus {
+                outline: none;
+                border: 2px solid $main-text-color;
 
-        &:focus {
-            outline: none;
-            border: 2px solid $main-text-color;
+                .subtext-psw,
+                .subtext-usn {
+                    color: $main-text-color;
+                }
+            }
+        }
+    
+        .error-message {
+            width: 100%;
+            height: 16px;
+            color: $main-color;
+            font-family: $sub-fontf;
+            font-size: 12px;
+            font-weight: 500;
+            line-height: 2;
+        }
+        
+        .subtext-usn {
+            width: 100%;
+            position: absolute;
+            top: 24%;
+            font-size: 12px;
+            font-family: quicksand;
+            font-weight: 500;
+            transition: 0.3s;
+            padding-left: 16px;
+        }
+    
+        .subtext-psw {
+            position: absolute;
+            top: 22%;
+            font-size: 12px;
+            font-family: $sub-fontf;
+            font-weight: 500;
+            transition: 0.3s;
+            padding-left: 16px;
         }
     }
-
-    .error {
-        width: 100%;
-        color: $main-color;
-        font-family: $sub-fontf;
-        font-size: 12px;
-        font-weight: 500;
-        line-height: 2;
-        display: none;
-    }
-    
-    .subtext-usn {
-        position: absolute;
-        top: 40%;
-        left: 5%;
-        font-size: 12px;
-        font-family: $sub-fontf;
-        font-weight: 500;
-        color: $main-text-color;
-        transition: 0.3s;
-        display: none;
-    }
-
-    .subtext-psw {
-        position: absolute;
-        top: 52%;
-        left: 6%;
-        font-size: 12px;
-        font-family: $sub-fontf;
-        font-weight: 500;
-        color: $main-text-color;
-        transition: 0.3s;
-        display: none;
-
-    }
-
-    // .input:focus + .subtext-usn,
-    // .input:not(:placeholder-shown) + .subtext-usn {
-    //     top: 40%;
-    //     left: 5%;
-    //     font-size: 12px;
-    //     padding-left: 8px;
-    //     color: $main-text-color;
-    //     display: block;
-    // }
-
-    // .input:focus + .subtext-psw,
-    // .input:not(:placeholder-shown) + .subtext-psw {
-    //     top: 52%;
-    //     left: 7%;
-    //     font-size: 12px;
-    //     padding-left: 8px;
-    //     color: $main-text-color;
-    //     display: block;
-    // }
 
     .password {
         width: 100%;
         height: 16px;
         display: flex;
         justify-content: space-between;
-        margin-top: 16px;
+        margin-top: 8px;
 
         .save-pass {
             height: 16px;
@@ -232,7 +230,7 @@
         }
     }
 
-    .login-btn {
+    #login-btn {
         width: 100%;
         height: 48px;
         color: #FCFCFC;
@@ -271,6 +269,42 @@
 
 }
 
+.login-message {
+    width: 25%;
+    height: 58px;
+    position: absolute;
+    right: 1%;
+    top: 8%;
+    display: flex;
+    border-radius: 5px;
+    box-shadow: 0 4px 24px 0 #5655D23D;
+    display: none;
+    animation: fadeIn 1s ease-in-out;
+
+    .error-icon {
+        width: 58px;
+        height: 100%;
+        background-color: $main-color;
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .message {
+        width: 80%;
+        font-family: Noto Sans;
+        font-size: 18px;
+        font-weight: 400;
+        color: $main-color;
+        display: flex;
+        align-items: center;
+        padding-left: 10px;
+    }
+}
+
+
 @media only screen and (max-width: 63.9375em) {
     main {
         height: 100vh;
@@ -280,25 +314,49 @@
         display: none;
     }
 
-    #login-form {
-        @include center;
-        animation: none;
-    }
-}
-
-/* Mobile */
-@media only screen and (max-width: 46.1875em) {
     #change-language {
-        width: 30%;
         height: 24px;
         top: 0;
         right: 0;
     }
 
-
     #login-form {
+        @include center;
+        animation: none;
+    }
+
+    .login-message {
+        width: 65%;
+        top: 3.5%;
+    }
+}
+
+/* Mobile */
+@media only screen and (max-width: 46.1875em) {
+    #login-form {
+        height: 530px;
         h3 {
             font-size: 16px;
+        }
+
+        .form-group {
+            .input {
+                height: 46px;
+            }
+        }
+    }
+
+    .login-message {
+        width: 65%;
+        height: 44px;
+
+        .error-icon {
+            width: 44px;    
+        }
+
+        .message {
+            font-size: 12px;
+            padding-left: 6px;
         }
     }
 }

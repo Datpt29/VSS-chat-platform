@@ -72,7 +72,7 @@ main {
   transition: all 0.3s ease;
 }
 
-#forgotpass-form {
+#forgot-pass-form {
   background-color: #FFFFFF;
   width: 30%;
   height: 620px;
@@ -82,7 +82,7 @@ main {
   right: 5%;
   top: 18%;
 }
-#forgotpass-form .header {
+#forgot-pass-form .header {
   width: 100%;
   height: 70px;
   background-color: #ee0033;
@@ -93,52 +93,52 @@ main {
   align-items: center;
   padding: 0 2% 0 2%;
 }
-#forgotpass-form .header .back {
+#forgot-pass-form .header .back {
   display: flex;
   align-items: center;
 }
-#forgotpass-form .header .back img {
+#forgot-pass-form .header .back img {
   width: 18px;
   height: 18px;
   color: #fff;
 }
-#forgotpass-form .header .back a {
+#forgot-pass-form .header .back a {
   color: #FFFFFF;
   font-family: quicksand;
   font-size: 16px;
   text-decoration: none;
 }
-#forgotpass-form .header h4 {
+#forgot-pass-form .header h4 {
   color: #FFFFFF;
   font-family: quicksand;
   font-size: 24px;
   text-align: center;
 }
-#forgotpass-form .content {
+#forgot-pass-form .content {
   padding: 0 8% 0 8%;
 }
-#forgotpass-form .content .img {
+#forgot-pass-form .content .img {
   margin-top: 16px;
   margin-bottom: 32px;
   display: flex;
   justify-content: center;
 }
-#forgotpass-form .content div {
+#forgot-pass-form .content div {
   margin-bottom: 32px;
 }
-#forgotpass-form .content div .heading {
+#forgot-pass-form .content div .heading {
   color: #ee0033;
   font-family: quicksand;
   font-size: 24px;
   font-weight: 700;
 }
-#forgotpass-form .content div .subheading {
+#forgot-pass-form .content div .subheading {
   color: #000000;
   font-family: quicksand;
   font-size: 16px;
   font-weight: 400;
 }
-#forgotpass-form .content input {
+#forgot-pass-form .content input {
   width: 100%;
   height: 58px;
   padding-left: 16px;
@@ -150,11 +150,11 @@ main {
   border-radius: 8px;
   margin-bottom: 56px;
 }
-#forgotpass-form .content input:focus {
+#forgot-pass-form .content input:focus {
   outline: none;
   border: 2px solid #5680f9;
 }
-#forgotpass-form .content .submit-btn {
+#forgot-pass-form .content .submit-btn {
   width: 100%;
   height: 48px;
   background-color: #D0D2D5;

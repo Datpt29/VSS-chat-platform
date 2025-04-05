@@ -185,6 +185,9 @@ main {
     height: 92%;
   }
   #signup-form .main-logo {
+    height: 88px;
+  }
+  #signup-form .main-logo {
     margin-top: 16px;
   }
   #signup-form h3 {

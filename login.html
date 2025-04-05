@@ -29,12 +29,16 @@
         <div id="login-form">
             <img class="main-logo" src="./assets/img/main-logo.jpg">
             <h3>Đăng nhập vào tài khoản của bạn</h3>
-            <input class="input" id="username" type="text" placeholder="Nhập tài khoản" required>
-            <label class="subtext-usn" for="username">Tài Khoản</label>
-            <p class="error">Bạn chưa nhập tài khoản</p>
-            <input class="input" id="password" type="password" placeholder="Nhập mật khẩu" required>
-            <label class="subtext-psw" for="password">Mật khẩu</label>
-            <p class="error">Bạn chưa nhập mật khẩu</p>
+            <div class="form-group">
+                <label class="subtext-usn hidden" for="username">Tài khoản</label>
+                <input class="input" id="username" type="email" placeholder="Nhập tài khoản" required>
+                <span class="error-message"></span>
+            </div>
+            <div class="form-group">
+                <label class="subtext-psw hidden" for="password">Mật khẩu</label>
+                <input class="input" id="password" type="password" placeholder="Nhập mật khẩu" required>
+                <span class="error-message"></span>
+            </div>
             <div class="password">
                 <label class="save-pass">
                     <input class="check-box" type="checkbox"> 
@@ -42,37 +46,30 @@
                 </label>
                 <a class="forgot-pass" href="forgot_pass.html">Quên mật khẩu?</a>
             </div>
-            <button class="login-btn">Đăng nhập</button>
+            <button onclick="handleLogin()" id="login-btn">Đăng nhập</button>
             <p class="signup-link-text">Bạn chưa có tài khoản?  <a class="signup-link" href="signup.html">Đăng ký</a></p>
+        </div>
+
+        <div class="login-message ">
+            <div class="error-icon">
+                <img src="./assets/icon/error-icon.svg" alt="">
+            </div>
+            <span class="message"></span>
         </div>
     </main>
 
+    <script src="./js/login.js"></script>
     <script>
-        const inputs = document.querySelectorAll('.input');
-        const errorMessages = document.querySelectorAll('.error');
+        Validator ({
+            form: '#login-form',
+            errorSelector: '.error-message',
+            rules: [
+                Validator.isEmail('#username'),
+                Validator.isPassword('#password'),
+            ],
+            onSubmit: function(data) {
 
-        function showError(input, errorMessage) {
-            errorMessage.style.display = 'block';
-            input.classList.add('error-input');
-            input.style.border = '1px solid red';
-            input.style.backgroundColor = '#F21B6A0D';
-        }
-
-        function hideError(input, errorMessage) {
-            errorMessage.style.display = 'none';
-            input.classList.remove('error-input');
-            input.style.border = '';
-            input.style.backgroundColor = '';
-        }
-
-        inputs.forEach((input, index) => {
-            input.addEventListener('blur', () => {
-            if (input.value.trim() === '') {
-                showError(input, errorMessages[index]);
-            } else {
-                hideError(input, errorMessages[index]);
-            }
-            });
+            }    
         });
     </script>
 </body>
