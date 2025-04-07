@@ -25,14 +25,6 @@ function Validator(options) {
 
     var formElement = document.querySelector(options.form);
     if (formElement) {
-        // formElement.onsubmit = function (e) {
-        //     e.preventDefault();
-        //     options.rules.forEach(function (rule) {
-        //         var inputElement = document.querySelector(rule.selector);
-        //         validate(inputElement, rule);
-        //     });
-        // };
-
         options.rules.forEach(function (rule) {
             var inputElement = formElement.querySelector(rule.selector);
             if (inputElement) {
