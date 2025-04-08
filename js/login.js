@@ -106,6 +106,12 @@ function handleLogin() {
         return;
     }
 
+    if (username === "" || password === "") {
+        message.innerText = "Bạn chưa nhập tài khoản hoặc mật khẩu";
+        loginMessage.style.display = "flex";
+        return;
+    }
+
     if (username === correctUsername && password === correctPassword) {
         localStorage.removeItem("failedAttempts"); 
         window.location.href = "index.html"; 
