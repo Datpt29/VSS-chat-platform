@@ -92,7 +92,6 @@ function handleLogin() {
     let password = document.getElementById("password").value;
     let message = document.querySelector(".message");
     let loginMessage = document.querySelector(".login-message");
-    let formElement = document.getElementById("login-form");
     loginMessage.style.display = "none"; 
     let attempts = parseInt(localStorage.getItem("failedAttempts")) || 0; 
 
@@ -103,6 +102,12 @@ function handleLogin() {
         message.innerText = "Bạn đã nhập sai quá nhiều lần. Vui lòng thử lại sau.";
         loginMessage.style.display = "flex";
         document.getElementById("login-btn").disabled = true;
+        return;
+    }
+
+    if (username === "" || password === "") {
+        message.innerText = "Bạn chưa nhập tài khoản hoặc mật khẩu";
+        loginMessage.style.display = "flex";
         return;
     }
 
@@ -126,5 +131,10 @@ function handleLogin() {
         loginMessage.style.display = "none";
     }
 
-    loginMessage.addEventListener("click", hideMessage);
+    document.addEventListener("click", function (event) {
+        if (!loginMessage.contains(event.target) && event.target !== document.getElementById("login-btn")) {
+            hideMessage();
+        }
+    });
+    
 }
