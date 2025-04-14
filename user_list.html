@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>user</title>
+    <link rel="stylesheet" href="./css/user_list.scss">
+    <link rel="stylesheet" href="./css/user_list.css">
+</head>
+
+<body>
+    <main>
+        <div id="navigation">
+            <img class="logo" src="./assets/img/logo.jpg" alt="">
+
+            <div class="nav-list">
+                <div class="nav-item">
+                    <a href="#"><img src="./assets/icon/tag-user.svg" alt="user icon"></a>
+                </div>
+            </div>
+        </div>
+
+        <div id="content">
+            <div id="header">
+                <div class="tab">
+                    <div class="tab-item ">
+                        <img class="tag-user" src="./assets/icon/tag-user.svg" alt="">
+                        Người dùng
+                        <span class="close">
+                            <img src="./assets/icon/close.svg" alt="">
+                        </span>
+                    </div>
+                </div>
+
+                <div class="notification">
+                    <img src="./assets/icon/notification.svg" alt="notification icon">
+                </div>
+
+                <div class="user">
+                    <img class="avatar" src="./assets/img/default_user.png" alt="avatar">
+                </div>
+            </div>
+
+            <div id="user-list">
+                <h1 class="heding">
+                    Danh sách người dùng
+                </h1>
+
+                <button class="add-user-btn">
+                    <img src="./assets/icon/add-square.svg" alt="">
+                    Thêm người dùng
+                </button>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>No</th>
+                            <th>Email</th>
+                            <th>First Name</th>
+                            <th>Last Name</th>
+                            <th>Avatar</th>
+                            <th class="operator"></th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="user-list-table">
+                        <tr>
+                            <th class="no">1</th>
+                            <th class="email">dat@gmail.com</th>
+                            <th class="first_name">Phạm Tiến</th>
+                            <th class="last_name">Đạt</th>
+                            <th class="avatar"></th>
+                            <th class="operator">
+                                <span class="edit-btn"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M4.15499 14.6406C3.69749 14.6406 3.26999 14.4831 2.96249 14.1906C2.57249 13.8231 2.38499 13.2681 2.45249 12.6681L2.72999 10.2381C2.78249 9.78065 3.05999 9.17315 3.38249 8.84315L9.53999 2.32565C11.0775 0.698147 12.6825 0.653147 14.31 2.19065C15.9375 3.72815 15.9825 5.33315 14.445 6.96065L8.28749 13.4781C7.97249 13.8156 7.38749 14.1306 6.92999 14.2056L4.51499 14.6181C4.38749 14.6256 4.27499 14.6406 4.15499 14.6406ZM11.9475 2.18315C11.37 2.18315 10.8675 2.54315 10.3575 3.08315L4.19999 9.60815C4.04999 9.76565 3.87749 10.1406 3.84749 10.3581L3.56999 12.7881C3.53999 13.0356 3.59999 13.2381 3.73499 13.3656C3.86999 13.4931 4.07249 13.5381 4.31999 13.5006L6.73499 13.0881C6.95249 13.0506 7.31249 12.8556 7.46249 12.6981L13.62 6.18065C14.55 5.19065 14.8875 4.27565 13.53 3.00065C12.93 2.42315 12.4125 2.18315 11.9475 2.18315Z"
+                                            fill="#8D99BB" />
+                                        <path
+                                            d="M13.005 8.21263C12.99 8.21263 12.9675 8.21263 12.9525 8.21263C10.6125 7.98013 8.72999 6.20263 8.36999 3.87763C8.32499 3.57013 8.53499 3.28513 8.84249 3.23263C9.14999 3.18763 9.43499 3.39763 9.48749 3.70513C9.77249 5.52013 11.2425 6.91513 13.0725 7.09513C13.38 7.12513 13.605 7.40263 13.575 7.71013C13.5375 7.99513 13.29 8.21263 13.005 8.21263Z"
+                                            fill="#8D99BB" />
+                                        <path
+                                            d="M15.75 17.0625H2.25C1.9425 17.0625 1.6875 16.8075 1.6875 16.5C1.6875 16.1925 1.9425 15.9375 2.25 15.9375H15.75C16.0575 15.9375 16.3125 16.1925 16.3125 16.5C16.3125 16.8075 16.0575 17.0625 15.75 17.0625Z"
+                                            fill="#8D99BB" />
+                                    </svg>
+                                </span>
+
+                                <span class="delete-btn"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M15.75 5.04687C15.735 5.04687 15.7125 5.04687 15.69 5.04687C11.7225 4.64937 7.7625 4.49937 3.84 4.89687L2.31 5.04687C1.995 5.07687 1.7175 4.85187 1.6875 4.53687C1.6575 4.22187 1.8825 3.95187 2.19 3.92187L3.72 3.77187C7.71 3.36687 11.7525 3.52437 15.8025 3.92187C16.11 3.95187 16.335 4.22937 16.305 4.53687C16.2825 4.82937 16.035 5.04687 15.75 5.04687Z"
+                                            fill="#8D99BB" />
+                                        <path
+                                            d="M6.37501 4.29C6.34501 4.29 6.31501 4.29 6.27751 4.2825C5.97751 4.23 5.76751 3.9375 5.82001 3.6375L5.98501 2.655C6.10501 1.935 6.27001 0.9375 8.01751 0.9375H9.98251C11.7375 0.9375 11.9025 1.9725 12.015 2.6625L12.18 3.6375C12.2325 3.945 12.0225 4.2375 11.7225 4.2825C11.415 4.335 11.1225 4.125 11.0775 3.825L10.9125 2.85C10.8075 2.1975 10.785 2.07 9.99001 2.07H8.02501C7.23001 2.07 7.21501 2.175 7.10251 2.8425L6.93001 3.8175C6.88501 4.095 6.64501 4.29 6.37501 4.29Z"
+                                            fill="#8D99BB" />
+                                        <path
+                                            d="M11.4075 17.0617H6.59248C3.97498 17.0617 3.86999 15.6142 3.78749 14.4442L3.29999 6.8917C3.27749 6.5842 3.51748 6.3142 3.82498 6.2917C4.13998 6.2767 4.40249 6.5092 4.42499 6.8167L4.91249 14.3692C4.99499 15.5092 5.02498 15.9367 6.59248 15.9367H11.4075C12.9825 15.9367 13.0125 15.5092 13.0875 14.3692L13.575 6.8167C13.5975 6.5092 13.8675 6.2767 14.175 6.2917C14.4825 6.3142 14.7225 6.5767 14.7 6.8917L14.2125 14.4442C14.13 15.6142 14.025 17.0617 11.4075 17.0617Z"
+                                            fill="#8D99BB" />
+                                        <path
+                                            d="M10.245 12.9375H7.7475C7.44 12.9375 7.185 12.6825 7.185 12.375C7.185 12.0675 7.44 11.8125 7.7475 11.8125H10.245C10.5525 11.8125 10.8075 12.0675 10.8075 12.375C10.8075 12.6825 10.5525 12.9375 10.245 12.9375Z"
+                                            fill="#8D99BB" />
+                                        <path
+                                            d="M10.875 9.9375H7.125C6.8175 9.9375 6.5625 9.6825 6.5625 9.375C6.5625 9.0675 6.8175 8.8125 7.125 8.8125H10.875C11.1825 8.8125 11.4375 9.0675 11.4375 9.375C11.4375 9.6825 11.1825 9.9375 10.875 9.9375Z"
+                                            fill="#8D99BB" />
+                                    </svg>
+                                </span>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th class="no">2</th>
+                            <th class="email">admin@gmail.com</th>
+                            <th class="first_name">Lê Văn</th>
+                            <th class="last_name">Đạo</th>
+                            <th class="avatar"></th>
+                            <th class="operator">
+                                <span class="edit-btn"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M4.15499 14.6406C3.69749 14.6406 3.26999 14.4831 2.96249 14.1906C2.57249 13.8231 2.38499 13.2681 2.45249 12.6681L2.72999 10.2381C2.78249 9.78065 3.05999 9.17315 3.38249 8.84315L9.53999 2.32565C11.0775 0.698147 12.6825 0.653147 14.31 2.19065C15.9375 3.72815 15.9825 5.33315 14.445 6.96065L8.28749 13.4781C7.97249 13.8156 7.38749 14.1306 6.92999 14.2056L4.51499 14.6181C4.38749 14.6256 4.27499 14.6406 4.15499 14.6406ZM11.9475 2.18315C11.37 2.18315 10.8675 2.54315 10.3575 3.08315L4.19999 9.60815C4.04999 9.76565 3.87749 10.1406 3.84749 10.3581L3.56999 12.7881C3.53999 13.0356 3.59999 13.2381 3.73499 13.3656C3.86999 13.4931 4.07249 13.5381 4.31999 13.5006L6.73499 13.0881C6.95249 13.0506 7.31249 12.8556 7.46249 12.6981L13.62 6.18065C14.55 5.19065 14.8875 4.27565 13.53 3.00065C12.93 2.42315 12.4125 2.18315 11.9475 2.18315Z"
+                                            fill="#8D99BB" />
+                                        <path
+                                            d="M13.005 8.21263C12.99 8.21263 12.9675 8.21263 12.9525 8.21263C10.6125 7.98013 8.72999 6.20263 8.36999 3.87763C8.32499 3.57013 8.53499 3.28513 8.84249 3.23263C9.14999 3.18763 9.43499 3.39763 9.48749 3.70513C9.77249 5.52013 11.2425 6.91513 13.0725 7.09513C13.38 7.12513 13.605 7.40263 13.575 7.71013C13.5375 7.99513 13.29 8.21263 13.005 8.21263Z"
+                                            fill="#8D99BB" />
+                                        <path
+                                            d="M15.75 17.0625H2.25C1.9425 17.0625 1.6875 16.8075 1.6875 16.5C1.6875 16.1925 1.9425 15.9375 2.25 15.9375H15.75C16.0575 15.9375 16.3125 16.1925 16.3125 16.5C16.3125 16.8075 16.0575 17.0625 15.75 17.0625Z"
+                                            fill="#8D99BB" />
+                                    </svg>
+                                </span>
+
+                                <span class="delete-btn"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M15.75 5.04687C15.735 5.04687 15.7125 5.04687 15.69 5.04687C11.7225 4.64937 7.7625 4.49937 3.84 4.89687L2.31 5.04687C1.995 5.07687 1.7175 4.85187 1.6875 4.53687C1.6575 4.22187 1.8825 3.95187 2.19 3.92187L3.72 3.77187C7.71 3.36687 11.7525 3.52437 15.8025 3.92187C16.11 3.95187 16.335 4.22937 16.305 4.53687C16.2825 4.82937 16.035 5.04687 15.75 5.04687Z"
+                                            fill="#8D99BB" />
+                                        <path
+                                            d="M6.37501 4.29C6.34501 4.29 6.31501 4.29 6.27751 4.2825C5.97751 4.23 5.76751 3.9375 5.82001 3.6375L5.98501 2.655C6.10501 1.935 6.27001 0.9375 8.01751 0.9375H9.98251C11.7375 0.9375 11.9025 1.9725 12.015 2.6625L12.18 3.6375C12.2325 3.945 12.0225 4.2375 11.7225 4.2825C11.415 4.335 11.1225 4.125 11.0775 3.825L10.9125 2.85C10.8075 2.1975 10.785 2.07 9.99001 2.07H8.02501C7.23001 2.07 7.21501 2.175 7.10251 2.8425L6.93001 3.8175C6.88501 4.095 6.64501 4.29 6.37501 4.29Z"
+                                            fill="#8D99BB" />
+                                        <path
+                                            d="M11.4075 17.0617H6.59248C3.97498 17.0617 3.86999 15.6142 3.78749 14.4442L3.29999 6.8917C3.27749 6.5842 3.51748 6.3142 3.82498 6.2917C4.13998 6.2767 4.40249 6.5092 4.42499 6.8167L4.91249 14.3692C4.99499 15.5092 5.02498 15.9367 6.59248 15.9367H11.4075C12.9825 15.9367 13.0125 15.5092 13.0875 14.3692L13.575 6.8167C13.5975 6.5092 13.8675 6.2767 14.175 6.2917C14.4825 6.3142 14.7225 6.5767 14.7 6.8917L14.2125 14.4442C14.13 15.6142 14.025 17.0617 11.4075 17.0617Z"
+                                            fill="#8D99BB" />
+                                        <path
+                                            d="M10.245 12.9375H7.7475C7.44 12.9375 7.185 12.6825 7.185 12.375C7.185 12.0675 7.44 11.8125 7.7475 11.8125H10.245C10.5525 11.8125 10.8075 12.0675 10.8075 12.375C10.8075 12.6825 10.5525 12.9375 10.245 12.9375Z"
+                                            fill="#8D99BB" />
+                                        <path
+                                            d="M10.875 9.9375H7.125C6.8175 9.9375 6.5625 9.6825 6.5625 9.375C6.5625 9.0675 6.8175 8.8125 7.125 8.8125H10.875C11.1825 8.8125 11.4375 9.0675 11.4375 9.375C11.4375 9.6825 11.1825 9.9375 10.875 9.9375Z"
+                                            fill="#8D99BB" />
+                                    </svg>
+                                </span>
+                            </th>
+                        </tr>
+                    </tbody>
+
+                    <tfoot>
+
+                    </tfoot>
+                </table>
+            </div>
+        </div>
+
+        <div class="user-info">
+            <div class="info">
+                <img src="./assets/img/default_user.png" alt="avatar">
+                <div class="sub-info">
+                    <span class="fullname">Lê Văn Đạo</span>
+                    <span class="role">Quản lý</span>
+                </div>
+            </div>
+
+            <div class="accout-type"></div>
+
+            <div class="user-status"></div>
+
+            <div class="options">
+                <a href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+                        <circle cx="12" cy="7" r="4" />
+                    </svg>
+                    Thông tin cá nhân
+                </a>
+            </div>
+            <div class="options">
+                <a href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="3" />
+                        <path
+                            d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z" />
+                    </svg>
+                    Cài đặt
+                </a>
+            </div>
+            <div class="options logout">
+                <a href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4" />
+                        <polyline points="16 17 21 12 16 7" />
+                        <line x1="21" y1="12" x2="9" y2="12" />
+                    </svg>
+                    Đăng xuất
+                </a>
+            </div>
+        </div>
+
+        <div class="popup">
+            <div class="popup-container">
+                <p>Bạn có chắc chắn muốn thoát không?</p>
+                <span class="close-popup">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="18" y1="6" x2="6" y2="18" />
+                        <line x1="6" y1="6" x2="18" y2="18" />
+                    </svg>
+                </span>
+                <span class="stay">Tiếp tục đăng nhập</span>
+                <span class="logout-btn">Đăng xuất</span>
+            </div>
+        </div>
+
+        <div class="edit-user">
+            <div class="edit-container">
+                <div class="edit-header">
+                    <h1>Sửa thông tin người dùng</h1>
+                    <span class="close-edit">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="18" y1="6" x2="6" y2="18" />
+                            <line x1="6" y1="6" x2="18" y2="18" />
+                        </svg>
+                    </span>
+                </div>
+
+                <div class="edit-main">
+                    <div class="first_name input">
+                        <label>Tên</label>
+                        <input class="first_name" type="text" name="" id="">
+                    </div>
+                    <div class="last_name input">
+                        <label>Họ</label>
+                        <input class="last_name" type="text" name="" id="">
+                    </div>
+                    <div class="email input">
+                        <label for="email">Email</label>
+                        <input class="email" type="email" name="" id="">
+                    </div>
+                </div>
+
+                <div class="btn">
+                    <button class="cancel">Hủy bỏ</button>
+                    <button class="save">Lưu</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="add-user">
+            <div class="add-container">
+                <div class="add-header">
+                    <h1>Thêm người dùng</h1>
+                    <span class="close-add">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="18" y1="6" x2="6" y2="18" />
+                            <line x1="6" y1="6" x2="18" y2="18" />
+                        </svg>
+                    </span>
+                </div>
+
+                <div class="add-main">
+                    <div class="first_name input">
+                        <label>Tên</label>
+                        <input class="first_name" type="text" name="" id="">
+                    </div>
+                    <div class="last_name input">
+                        <label>Họ</label>
+                        <input class="last_name" type="text" name="" id="">
+                    </div>
+                    <div class="email input">
+                        <label for="email">Email</label>
+                        <input class="email" type="email" name="" id="">
+                    </div>
+                </div>
+
+                <div class="btn">
+                    <button class="cancel-add">Hủy bỏ</button>
+                    <button class="save-add">Lưu</button>
+                </div>
+            </div>
+    </main>
+
+    <script src="./js/user_list.js">
+
+    </script>
+</body>
+
+</html>
